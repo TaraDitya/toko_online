@@ -16,5 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
 Route::resource('ulasan', UlasanController::class);
 Route::resource('produk', produkController::class);
+

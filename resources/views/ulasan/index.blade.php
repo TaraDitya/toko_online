@@ -30,11 +30,11 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                @forelse ($ulasans as $ulasan)
-
+                                
                                 @php
                                 $no =1;
                                 @endphp
+                                @forelse ($ulasans as $ulasan)
                                 <tr>
                                     <td class="text-center">{{ $no++ }}</td>
                                     <td>{{ $ulasan->username }}</td>
