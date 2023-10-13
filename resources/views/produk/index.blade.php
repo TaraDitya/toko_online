@@ -30,8 +30,8 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                @forelse ($produks as $produk)
-
+                            
+                                @foreach ($produks as $produk)
                                 @php
                                 $no =1;
                                 @endphp
@@ -58,7 +58,7 @@
                                 <div class="alert alert-danger">
                                     Data belum Tersedia.
                                 </div>
-                                @endforelse
+                                @endforeach
                             </tbody>
                         </table>
                         {{ $produks->links() }}
