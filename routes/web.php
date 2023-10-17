@@ -19,4 +19,4 @@ Route::get('/', function () {
 
 Route::resource('ulasan', UlasanController::class);
 Route::resource('produk', produkController::class);
-
+Route::resource('crud-produk', crud_produkController::class);
