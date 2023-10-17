@@ -13,7 +13,7 @@ class produkController extends Controller
     public function index()
     {
         $produks = produk::latest()->paginate(10);
-        return view('produk.index',compact('produks'));
+        return view('produk.index',compact('produks'))->with('produk',$produks);
     }
 
     public function create()
@@ -25,7 +25,7 @@ class produkController extends Controller
         $this->validate($request, [
             'foto_produk'=>'required|image|mimes:png,jpg,jpeg',
             'nama_produk'=>'required',
-            'harga_produk'=>'required'
+            'harga_produk'=>'required|numeric'
         ]);
 
         $foto_produk =$request->file('foto_produk');
