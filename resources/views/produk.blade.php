@@ -25,16 +25,115 @@
             <!-- dropdwon -->
             <!-- produk -->
             <h6><b>Semua Produk</b></h6>
-            <div class="row mt-2 mb-3">
-                    <div class="col-2">
-                        <div class="card" style="width: 18rem;">
-                            <img src="{{url:: ('storage/produks/BjHeEplw54R2aMCZVP08iZEkmgaJKelw6cr2txSh,jpg')}}" class="card-img-top" alt="...">
+            <div class="daftar-produk container mt-3 mb-3">
+                <div class="row">
+                    <div class="col-md-3 mb-3">
+                        <div class="card shadow">
+                            <img src="{{asset('produk/baju1.jpeg')}}" style="height: 180px; width: 100%; object-fit: cover;" 
+                            class="card-img-top" alt="Baju 1" />
                             <div class="card-body">
                                 <p class="card-text">Baju</p>
                                 <p class="card-text"><b>Rp. 300.000</b></p>
                             </div>
                         </div>
-                    </div>             
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <div class="card shadow">
+                            <img src="{{asset('produk/baju2.png')}}"  style="height: 180px; width: 100%; object-fit: cover;" class="card-img-top" alt="Baju 1" />
+                            <div class="card-body">
+                                <p class="card-text">Sambal Siwang</p>
+                                <p class="card-text"><b>Rp. 10.000</b></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <div class="card shadow">
+                            <img src="{{asset('produk/baju1.jpeg')}}" style="height: 180px; width: 100%; object-fit: cover;" 
+                            class="card-img-top" alt="Baju 1" />
+                            <div class="card-body">
+                                <p class="card-text">Baju</p>
+                                <p class="card-text"><b>Rp. 300.000</b></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <div class="card shadow">
+                            <img src="{{asset('produk/baju2.png')}}"  style="height: 180px; width: 100%; object-fit: cover;" class="card-img-top" alt="Baju 1" />
+                            <div class="card-body">
+                                <p class="card-text">Sambal Siwang</p>
+                                <p class="card-text"><b>Rp. 10.000</b></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <div class="card shadow">
+                            <img src="{{asset('produk/baju1.jpeg')}}" style="height: 180px; width: 100%; object-fit: cover;" 
+                            class="card-img-top" alt="Baju 1" />
+                            <div class="card-body">
+                                <p class="card-text">Baju</p>
+                                <p class="card-text"><b>Rp. 300.000</b></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <div class="card shadow">
+                            <img src="{{asset('produk/baju2.png')}}"  style="height: 180px; width: 100%; object-fit: cover;" class="card-img-top" alt="Baju 1" />
+                            <div class="card-body">
+                                <p class="card-text">Sambal Siwang</p>
+                                <p class="card-text"><b>Rp. 10.000</b></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <div class="card shadow">
+                            <img src="{{asset('produk/baju1.jpeg')}}" style="height: 180px; width: 100%; object-fit: cover;" 
+                            class="card-img-top" alt="Baju 1" />
+                            <div class="card-body">
+                                <p class="card-text">Baju</p>
+                                <p class="card-text"><b>Rp. 300.000</b></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <div class="card shadow">
+                            <img src="{{asset('produk/baju2.png')}}"  style="height: 180px; width: 100%; object-fit: cover;" class="card-img-top" alt="Baju 1" />
+                            <div class="card-body">
+                                <p class="card-text">Sambal Siwang</p>
+                                <p class="card-text"><b>Rp. 10.000</b></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <ul class="pagination pagination-sm">
+                            <li style="color:grey">Jumlah Produk Per halaman</li>
+                            <span class="ms-2">
+                                <li class="ms-2 me-2 rounded">
+                                    <a href=""><center>20</center></a>
+                                </li>
+                            </span>
+                            <span >
+                                <li class="ms-2 me-2 rounded">
+                                    <a href=""><center>40</center></a>
+                                </li>
+                            </span>
+                            <span>
+                                <li  class="ms-2 me-2 rounded" >
+                                    <a href=""><center>80</center></a>
+                                </li>
+                            </span>
+                        </ul>
+                    </div>
+                    <ul class="pagination pagination-sm justify-content-end">
+                            <li  class="ms-2 me-2 rounded-circle" >
+                                <a href="">
+                                    <i class="bi bi-chevron-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+                
             </div>
         </div>
     </div>
