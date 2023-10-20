@@ -28,7 +28,7 @@
             <div class="row mt-2 mb-3">
                     <div class="col-2">
                         <div class="card" style="width: 18rem;">
-                            <img src="{{url:: ('storage/produks/BjHeEplw54R2aMCZVP08iZEkmgaJKelw6cr2txSh,jpg')}}" class="card-img-top" alt="...">
+                            <img src="./storage/produks/BjHeEplw54R2aMCZVP08iZEkmgaJKelw6cr2txSh.jpg" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <p class="card-text">Baju</p>
                                 <p class="card-text"><b>Rp. 300.000</b></p>
