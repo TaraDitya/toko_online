@@ -16,6 +16,62 @@
             font-family: 'Nunito', sans-serif;
         }
 
+        /* popup */
+
+        .popup {
+            width: 100%;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, .8);
+            position: fixed;
+            top: 0;
+            left: 0;
+
+            opacity: 0;
+            visibility: hidden;
+            transition: all .3s;
+        }
+
+        .popup-content {
+            width: 75%;
+            background-color: #fff;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, .2);
+
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(.25);
+            opacity: 0;
+
+            transition: all .5s .1s;
+        }
+
+        #popup:target {
+            opacity: 1;
+            visibility: visible;
+        }
+        #popup:target .popup-content{
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1);
+        }
+
+        .popup-close:link 
+        .popup-close:visited {
+            position: absolute;
+            top: 12px;
+            right:20px;
+            text-decoration: none;
+            color: #000;
+            font-size: 30px 
+            display: inline-block;
+            line-height: 1;
+            transition: all .3s;
+
+        }
+        .popup-close:hover 
+        .popup-close:active {
+            color: #555;
+        }
+
     </style>
     <!-- bootstrap css -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -26,8 +82,14 @@
 
     <!-- Produk css -->
     <link rel="stylesheet" href="{{asset('css/produk.css')}}">
+
+    <script
+        src="https://unpkg.com/vue@3/dist/vue.global.js">
+    </script>
+
     <!--list css-->
     <link rel="stylesheet" href="{{asset('css/list.css')}}">
+
 </head>
 
 <body>
@@ -36,7 +98,7 @@
             style="border-radius: 10px;" width=400>
             <div class="d-flex ">
                 <img src="{{asset('imgs/logo-balanja.png')}}"
-                    class="rounded-circle float-start border border-dark-subtle " width=120 height=120
+                    class="rounded float-start border border-dark-subtle " width=120
                     alt="profil-toko">
                 <div class="deskripsi-toko">
                     <h4 class="text-uppercase ms-2">balanja-id</h4>
@@ -48,13 +110,42 @@
                         <button type="button" class="btn btn-success ps-5 pe-5"><b>follow</b></button>
                         <button type="button" class="btn btn-light text-success border border-success ps-4 pe-4"><b>Chat
                                 Penjual</b></button>
-                        <a href="" class="border border-dark-subtle p-2 pt-1 text-dark-emphasis"
+
+
+                        <a href="#popup" class="border border-dark-subtle p-2 pt-1 text-dark-emphasis"
                             style="border-radius: 10px; text-decoration: none;"><svg xmlns="http://www.w3.org/2000/svg"
                                 width="20" height="20" fill="currentColor" class="bi bi-info-circle-fill"
                                 viewBox="0 0 16 16">
                                 <path
                                     d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z" />
                             </svg></a>
+
+                            <div class="popup " id="popup">
+                                <div class="popup-content p-3">
+                                    <a href="#" class="popup-close"><i class="bi bi-x"></i></a>
+                                    <h3 class="p-4">balanja.id</h3>
+
+                                    <div class="row">
+                                        <div class="col p-2 border dorder-dark-subtle" style="border-radius: 10px;">
+                                            <div class="pop-head"><h5>Deskipsi Toko</h5></div>
+                                            <div class="pop-deskipsi">
+                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur officiis dolor quas earum beatae laborum ipsam alias ratione pariatur quibusdam esse, quos quasi nostrum veniam ea asperiores eos saepe reiciendis. Corrupti qui cumque fuga deserunt!</p>
+                                            </div>
+                                        </div>
+                                        <div class="col p-2 border dorder-dark-subtle" style="border-radius: 10px;">
+                                            <div class="pop-head"><h5>catatan toko</h5></div>
+                                            <div class="pop-deskipsi">
+                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur officiis dolor quas earum beatae laborum ipsam alias ratione pariatur quibusdam esse, quos quasi nostrum veniam ea asperiores eos saepe reiciendis. Corrupti qui cumque fuga deserunt!</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="lampiran-toko">
+                                        <p>sponsor</p>
+                                        <img src="./imgs/1662slide2.jpg" width=100 alt="">
+                                    </div>
+                                </div>
+                            </div>
+
                         <a href="" class="border border-dark-subtle p-2 pt-1 text-dark-emphasis"
                             style="border-radius: 10px; text-decoration: none;"><svg xmlns="http://www.w3.org/2000/svg"
                                 width="20" height="20" fill="currentColor" class="bi bi-share" viewBox="0 0 16 16">
@@ -111,12 +202,12 @@
     <div class="detail mt-3 ">
         <!-- masukan content toko beranda,produk,ulasan disini -->
 
+        @include('beranda')
+
         <!-- Produk -->
         @include('produk')
         <!-- menggunakan include -->
-        <!-- bikin we dulu halamannya nanti di include nya :) -->
-        <!-- mangat 💪 -->
-
+        
     </div>
 
     <!-- info toko -->

@@ -25,6 +25,11 @@
             <!-- dropdwon -->
             <!-- produk -->
             <h6><b>Semua Produk</b></h6>
+
+            <div class="row mt-2 mb-3">
+                    <div class="col-2">
+                        <div class="card" style="width: 18rem;">
+                            <img src="./storage/produks/BjHeEplw54R2aMCZVP08iZEkmgaJKelw6cr2txSh.jpg" class="card-img-top" alt="...">
             <div class="daftar-produk container mt-3 mb-3">
                 <div class="row">
                     <div class="col-md-3 mb-3">
