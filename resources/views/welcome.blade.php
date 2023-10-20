@@ -86,6 +86,10 @@
     <script
         src="https://unpkg.com/vue@3/dist/vue.global.js">
     </script>
+
+    <!--list css-->
+    <link rel="stylesheet" href="{{asset('css/list.css')}}">
+
 </head>
 
 <body>
@@ -178,6 +182,22 @@
                 </div>
             </div>
         </div>
+    </div>
+
+    <!-- list klik-->
+    <div class="list container mt-3 mb-2">
+        <ul>
+            <a href="">
+                <li class="ms-4">Beranda</li>
+            </a>
+            <a href="">
+                <li class="ms-5">Produk</li>
+            </a>
+            <a href="">
+                <li class="ms-5">Ulasan</li>
+            </a>
+        </ul>
+        <div class="hr mt-2"></div>
     </div>
     <div class="detail mt-3 ">
         <!-- masukan content toko beranda,produk,ulasan disini -->
