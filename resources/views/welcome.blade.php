@@ -19,12 +19,14 @@
         /* popup */
 
         .popup {
+            z-index: 100;
             width: 100%;
             height: 100vh;
             background-color: rgba(0, 0, 0, .8);
             position: fixed;
             top: 0;
             left: 0;
+            
 
             opacity: 0;
             visibility: hidden;
@@ -32,12 +34,14 @@
         }
 
         .popup-content {
-            width: 75%;
+            width: 65%;
+            border-radius: 20px;
             background-color: #fff;
             box-shadow: 0 20px 40px rgba(0, 0, 0, .2);
+            overflow: hidden;
 
             position: absolute;
-            top: 30%;
+            top: 50%;
             left: 50%;
             transform: translate(-50%, -50%) scale(.25);
             opacity: 0;
@@ -59,7 +63,6 @@
             position: absolute;
             top: 12px;
             right:20px;
-            text-decoration: none;
             color: #000;
             font-size: 30px 
             display: inline-block;
@@ -94,7 +97,7 @@
             style="border-radius: 10px;" width=400>
             <div class="d-flex ">
                 <img src="{{asset('imgs/logo-balanja.png')}}"
-                    class="rounded float-start border border-dark-subtle " width=120
+                    class="rounded float-start border border-dark-subtle object-fit-sm-contain" width=120
                     alt="profil-toko">
                 <div class="deskripsi-toko">
                     <h4 class="text-uppercase ms-2">balanja-id</h4>
@@ -108,7 +111,7 @@
                                 Penjual</b></button>
 
 
-                        <a href="#popup" class="border border-dark-subtle p-2 pt-1 text-dark-emphasis"
+                        <a href="#popup" class="border border-dark-subtle p-2 pt-1 text-dark-emphasis" title="info toko"
                             style="border-radius: 10px; text-decoration: none;"><svg xmlns="http://www.w3.org/2000/svg"
                                 width="20" height="20" fill="currentColor" class="bi bi-info-circle-fill"
                                 viewBox="0 0 16 16">
@@ -118,31 +121,57 @@
 
                             <div class="popup " id="popup">
                                 <div class="popup-content p-3">
-                                    <a href="#" class="popup-close"><i class="bi bi-x"></i></a>
-                                    <h3 class="p-4">balanja.id</h3>
+                                    <div class="header-popup d-flex justify-content-between">
+                                        <h3 class="p-4 fw-bold text-uppercase">balanja.id</h3>
+                                        <a href="#" class="popup-close" style="text-decoration: none;"><i class="bi bi-x" style="font-size: 30px;"></i></a>
+                                    </div>
+                                    
+                                    
 
+                                <div class="container">
                                     <div class="row">
-                                        <div class="col p-2 border dorder-dark-subtle" style="border-radius: 10px;">
-                                            <div class="pop-head"><h5>Deskipsi Toko</h5></div>
-                                            <div class="pop-deskipsi">
-                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur officiis dolor quas earum beatae laborum ipsam alias ratione pariatur quibusdam esse, quos quasi nostrum veniam ea asperiores eos saepe reiciendis. Corrupti qui cumque fuga deserunt!</p>
-                                            </div>
-                                        </div>
-                                        <div class="col p-2 border dorder-dark-subtle" style="border-radius: 10px;">
-                                            <div class="pop-head"><h5>catatan toko</h5></div>
-                                            <div class="pop-deskipsi">
-                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur officiis dolor quas earum beatae laborum ipsam alias ratione pariatur quibusdam esse, quos quasi nostrum veniam ea asperiores eos saepe reiciendis. Corrupti qui cumque fuga deserunt!</p>
-                                            </div>
+                                    <div class="col-3 p-2">
+                                        <div class="pop-head text-uppercase"><h5>Deskipsi Toko</h5></div>
+                                        <hr>
+                                        <div class="pop-deskipsi">
+                                            <small>
+                                            <p style="line-height: 1.1;">Lorem ipsum dolor sit amet consectetur adipisicing elit. officiis dolor quas earum beatae laborum ipsam alias.</p>
+                                            <p class="text-secondary" style="line-height: 1;"><i class="bi bi-geo-alt-fill"></i> Bandung</p>
+                                            <p class="text-secondary" style="line-height: 1;"><i class="bi bi-door-open"></i> Buka sejak:January 2023</p>
+                                            </small>
                                         </div>
                                     </div>
-                                    <div class="lampiran-toko">
-                                        <p>sponsor</p>
-                                        <img src="./imgs/1662slide2.jpg" width=100 alt="">
+                                    <div class="col p-2 ">
+                                        <div class="pop-head text-uppercase"><h5>catatan toko</h5></div>
+                                        <hr>
+                                        <div class="dropdown">
+                                            <button class="btn btn-light dropdown-toggle w-100 border border-dark-subtle text-start d-flex justify-content-between align-items-center fw-medium" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                Informasi jadwal toko dan jadwal pengiriman
+                                            </button>
+                                            <ul class="dropdown-menu w-100 text-start p-2">
+                                                <li><p class="fw-medium" style="line-height: 1;">Open Shop: Senin-Sabtu (hari minggu dan tanggal merah libur)</p></li>
+                                                <li><p style="line-height: 1;"><small>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil deserunt sint enim, nesciunt dicta provident ea quibusdam, facilis tempora culpa ipsum alias sequi delectus asperiores nulla ipsam esse consequuntur quasi.</small></p></li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                                <br>
+                                <p class="fw-medium text-uppercase">langganan pengiriman</p>
+                                <div class="lampiran-toko d-flex">
+                                    <div class="jnt p-2 d-flex border border-dark-subtle" style="border-radius: 10px;">
+                                        <img src="./imgs/kurir-jnt.png" class="object-fit-sm-contain" style="padding-right: 5px;" width=50 alt="">
+                                        <p> pegiriman lewat JNT</p>
+                                    </div>
+                                    <div class="jne p-2 d-flex border border-dark-subtle" style="border-radius: 10px;">
+                                        <img src="./imgs/kurir-jne.png" class="object-fit-sm-contain" style="padding-right: 5px;" width=50 alt="">
+                                        <p> pegiriman lewat JNE</p>
+                                    </div>
 
-                        <a href="" class="border border-dark-subtle p-2 pt-1 text-dark-emphasis"
+                                </div>
+                            </div>
+                        </div>        
+                        </div>
+                        <a href="" class="border border-dark-subtle p-2 pt-1 text-dark-emphasis" title="Bagikan link"
                             style="border-radius: 10px; text-decoration: none;"><svg xmlns="http://www.w3.org/2000/svg"
                                 width="20" height="20" fill="currentColor" class="bi bi-share" viewBox="0 0 16 16">
                                 <path
@@ -183,6 +212,7 @@
         <!-- masukan content toko beranda,produk,ulasan disini -->
 
         @include('beranda')
+        <br>
 
         <!-- Produk -->
         @include('produk')
@@ -194,7 +224,7 @@
     <div class="container">
         <hr>
         <div class="deskripsi">
-            <h5><b>Lorem ipsum dolor sit amet consectetur adipisicing elit.</b></h5>
+            <h5><b>Informasi Toko Balanja.id</b></h5>
             <h6>deskripsi toko Balanja.id</h6>
             <br>
 
