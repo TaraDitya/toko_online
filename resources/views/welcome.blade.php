@@ -75,6 +75,47 @@
             color: #555;
         }
 
+        .jam-op {
+            z-index: 100;
+            width: 100%;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, .8);
+            position: fixed;
+            top: 0;
+            left: 0;
+            
+
+            opacity: 0;
+            visibility: hidden;
+            transition: all .3s;
+        }
+
+        .jam-op-content {
+            width:35%;
+            line-height: 2;
+            border-radius: 20px;
+            background-color: #fff;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, .2);
+            overflow: hidden;
+
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(.25);
+            opacity: 0;
+
+            transition: all .5s .1s;
+        }
+
+        #jam-op:target {
+            opacity: 1;
+            visibility: visible;
+        }
+        #jam-op:target .jam-op-content{
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1);
+        }
+
     </style>
     <!-- bootstrap css -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -123,7 +164,7 @@
                                 <div class="popup-content p-3">
                                     <div class="header-popup d-flex justify-content-between">
                                         <h3 class="p-4 fw-bold text-uppercase">balanja.id</h3>
-                                        <a href="#" class="popup-close" style="text-decoration: none;"><i class="bi bi-x" style="font-size: 30px;"></i></a>
+                                        <a href="#" class="popup-close text-dark" style="text-decoration: none;"><i class="bi bi-x" style="font-size: 30px;"></i></a>
                                     </div>
                                     
                                     
@@ -199,12 +240,55 @@
                             diproses</p>
                     </div>
                     <div class="border-end border-dark-subtle"></div>
-                    <div class="p-2 mt-2">
+                    <div class="p-2 mt-2"><a href="#jam-op" class="text-dark" style="text-decoration: none;">
                         <p class="ps-3"><b>08:00 - 16:00</b></p>
                         <p class="text-dark-emphasis ps-3 pe-2" style="font-size: 0.9em; margin-top: -10px;">Jam oprasi
                             toko</p>
+                        </a>
                     </div>
                 </div>
+                <div class="jam-op " id="jam-op">
+                    <div class="jam-op-content p-3">
+                        <div class="header-jam-op d-flex justify-content-between">
+                            <h5 class="ps-4 pt-4 fw-bold text-uppercase"> Jam Oprasional balanja.id</h5>
+                                <a href="#" class="jam-op-close pb-2 text-dark" style="text-decoration: none;"><i class="bi bi-x" style="font-size: 30px;"></i></a>
+                        </div>
+
+                        <div class="container ps-3">
+                            <div class="deskripsi-jamop p-2 d-flex">
+                                <i class="bi bi-shop fs-3"></i>
+                                <p class="pt-3 ps-3" style="line-height: 1;"> <small>Pesanan di luar jam operasional akan berpotensi mengalami keterlambatan dalam pengiriman.</small></p>
+                            </div>
+                        </div>
+
+                        <div class="container ps-3">
+                            <div class="row ps-3 pb-2 pt-2 d-flex justify-content-between border-bottom border-dark-subtle" >
+                                <div class="col-sm text-space-between text-secondary">Senin</div>
+                                <div class="col-sm text-end text-black">08:00 - 17:00 WIB</div>
+                            </div>
+                            <div class="row ps-3 pb-2 pt-2 d-flex justify-content-between border-bottom border-dark-subtle" >
+                                <div class="col-sm text-space-between text-secondary">Selasa</div>
+                                <div class="col-sm text-end text-black">08:00 - 17:00 WIB</div>
+                            </div>
+                            <div class="row ps-3 pb-2 pt-2 d-flex justify-content-between border-bottom border-dark-subtle" >
+                                <div class="col-sm text-space-between text-secondary">Rabu</div>
+                                <div class="col-sm text-end text-black">08:00 - 17:00 WIB</div>
+                            </div>
+                            <div class="row ps-3 pb-2 pt-2 d-flex justify-content-between border-bottom border-dark-subtle" >
+                                <div class="col-sm text-space-between text-secondary">Kamis</div>
+                                <div class="col-sm text-end text-black">08:00 - 17:00 WIB</div>
+                            </div>
+                            <div class="row ps-3 pb-2 pt-2 d-flex justify-content-between border-bottom border-dark-subtle" >
+                                <div class="col-sm text-space-between text-secondary">Jum'at</div>
+                                <div class="col-sm text-end text-black">08:00 - 17:00 WIB</div>
+                            </div>
+                            <div class="row ps-3 pb-2 pt-2 d-flex justify-content-between" >
+                                <div class="col-sm text-space-between text-secondary">Sabtu</div>
+                                <div class="col-sm text-end text-black">08:00 - 16:00 WIB</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>        
             </div>
         </div>
     </div>
