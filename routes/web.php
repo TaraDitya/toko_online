@@ -14,9 +14,14 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('beranda');
 });
-
-Route::resource('ulasan', UlasanController::class);
-Route::resource('produk', produkController::class);
-Route::resource('crud-produk', crud_produkController::class);
+Route::get('/beranda', function () {
+    return view('beranda');
+});
+Route::get('/produk', function(){
+    return view('produk');
+});
+Route::get('/ulasan', function () {
+    return view('ulasan');
+});

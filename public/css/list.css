@@ -1,28 +1,34 @@
-.list ul{
+.list ul {
     margin: 0;
     padding: 0;
     display: flex;
     list-style: none;
     align-items: center;
 }
-.list li{
+
+.list li {
     position: relative;
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
-.list a{
+
+.list a {
     text-decoration: none;
     color: grey;
     font-weight: 500;
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
-.list ul a:hover{
+
+.list ul a:hover {
     text-decoration: none;
     color: green;
     font-weight: 500;
+    border-bottom: 1px solid green;
 }
-.hr{
-    -moz-border-box:1px;
-    -webkit-border-box:1px;
-    background-color: rgba(0, 0, 0, 0.452);
-    border-left: 90px solid green; 
-    padding: 1px; 
-    text-align: left;
+
+hr {
+    color: rgba(0, 0, 0, 0.562);
+    margin: 0;
+    padding: 0;
 }

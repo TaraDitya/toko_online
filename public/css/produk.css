@@ -1,37 +1,42 @@
+#produk .card ul a {
+    text-decoration: none;
+    color: #000;
+}
 
-#produk .card ul a{
+#produk .card ul a li {
     text-decoration: none;
     color: #000;
 }
-#produk .card ul a li{
-    text-decoration: none;
-    color: #000;
-}
-#produk .card ul li:hover{
+
+#produk .card ul li:hover {
     text-decoration: none;
     color: #000;
     background-color: lightgray;
     font-weight: 500;
 }
-.daftar-produk .pagination span li a{
+
+.daftar-produk .pagination span li a {
     text-decoration: none;
     color: #000;
 }
+
 .daftar-produk .pagination span:hover,
-.daftar-produk .pagination li a:hover{
+.daftar-produk .pagination li a:hover {
     text-decoration: none;
     color: white;
     background-color: grey;
     border-radius: 3px;
 }
-.pagination .rounded-circle a i{
+
+.pagination .rounded-circle a i {
     background-color: #fff;
-    border: solid rgba(0, 0, 0, 0.1) ;
+    border: solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
 }
-.pagination .rounded-circle a i:hover{
+
+.pagination .rounded-circle a i:hover {
     background-color: grey;
     color: #fff;
-    border:none ;
+    border: none;
     border-radius: 100%;
 }
